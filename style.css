@@ -1823,18 +1823,7 @@ header .menu{
   
   /* banner end*/
   
-  /* about */
-  
-/*   .about .row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .about .row .image{
-    flex: 1 1 40rem;
-  }
+/*
   
   .about .row .image img{
     width: 100%;
