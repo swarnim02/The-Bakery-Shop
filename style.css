@@ -50,6 +50,13 @@ header .menu{
     font-weight: 500;
 } */
 /* css slider */
+
+body{
+    font-family: Poppins;
+    margin: 0;
+    background-color: #010101;
+    color: white ;
+}
 .slider{
     height: 100vh;
     margin-top: -50px;
