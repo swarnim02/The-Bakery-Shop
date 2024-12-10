@@ -1,8 +1,7 @@
 body{
     background-image: url(./5.jpg);
     z-index:0;
-    content:cover;
-    background-repeat:no-repeat;
+    content:full-screen;
 }
 .bgimg{
     z-index:50;
