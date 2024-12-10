@@ -54,7 +54,7 @@ header .menu{
 body{
     font-family: Poppins;
     margin: 0;
-    background-color: #010101;
+    background-color: white;
     color: white ;
 }
 .slider{
@@ -201,7 +201,7 @@ body{
     --primary-color:  #c98d83;
     --secondary : #783b31;
     --bg: #f2f1ec;
-    --black: #000;
+    --black: black;
     --white: white;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
   }
