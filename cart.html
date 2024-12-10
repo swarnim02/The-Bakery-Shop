@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bakery Shop - Cart</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: whitesmoke; 
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
+    h1, h2, h3 {
+      color: grey;
+    }
+
+    .cart-container {
+      padding: 15px;
+      background-color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-container h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .cart-items-count {
+      font-size: 16px;
+      background-color: grey;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .header-container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header-container h1 {
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      background-color: black;
+      border: 5px solid grey;
+      border-radius: 8px;
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+    }
+
+    .product button {
+      background-color: grey;
+      color: black;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product button:hover {
+      background-color: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <!-- Items will be dynamically added here -->
+    <!-- </div>
+    <div class="cart-summary">
+      <p>Subtotal: <span id="subtotal">$0.00</span></p>
+      <p>Tax (6%): <span id="tax">$0.00</span></p>
+      <p><strong>Total: <span id="total">$0.00</span></strong></p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+    <div class="payment-options">
+      <h3>Payment Options</h3>
+      <img src="https://via.placeholder.com/50?text=Visa" alt="Visa">
+      <img src="https://via.placeholder.com/50?text=MasterCard" alt="MasterCard">
+      <img src="https://via.placeholder.com/50?text=PayPal" alt="PayPal">
+    </div>
+  </div> --> -->
+  <!-- Header Section -->
+  <div class="header-container">
+    <h1>Welcome to Our Bakery</h1>
+    <!-- Cakes Section -->
+    <h2>Breads</h2>
+    <div class="products">
+      <div class="product" data-name="Cinnamon Swirl Bread " data-price="15.00">
+        <img src="placeholder-1.jpg" alt="">
+        <h3>Chocolate Cake</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹88</button>
+      </div>
+      <div class="product" data-name="Keto Bread" data-price="12.00">
+        <img src="placeholder-2.jpg" alt="Keto Bread">
+        <h3>Keto Bread</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹88</button>
+      </div>
+      <div class="product" data-name="Sourdough" data-price="12.00">
+        <img src="placeholder-3.jpg" alt="Sourdough">
+        <h3>Sourdough</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹88</button>
+      </div>
+      <div class="product" data-name="Baguette" data-price="12.00">
+        <img src="placeholder-4.jpg" alt="Baguette">
+        <h3>Baguette</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹88</button>
+      </div>
+    </div>
+    <!-- Cupcake Section -->
+    <h2>Cakes</h2>
+    <div class="products">
+      <div class="product" data-name="Vanilla Cake" data-price="3.50">
+        <img src="cake-1.jpg" alt="Vanilla Cake">
+        <h3>Vanilla Cake</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹689</button>
+      </div>
+      <div class="product" data-name="Chocolate Cake" data-price="4.00">
+        <img src="cake-2.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹689</button>
+      </div>
+      <div class="product" data-name="Red velvet Cake" data-price="3.50">
+        <img src="cake-3.jpg" alt="Red velvet Cake">
+        <h3>Red velvet Cake</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹689</button>
+      </div>
+      <div class="product" data-name="Coffee Cake" data-price="3.50">
+        <img src="cake-4.jpg" alt="Coffee Cake">
+        <h3>Coffee Cake</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹689</button>
+      </div>
+    </div>
+    
+    <!-- Donuts Section -->
+    <h2>Donuts</h2>
+    <div class="products">
+      <div class="product" data-name="Glazed Donut" data-price="2.50">
+        <img src="Donut-1.jpg" alt="Glazed Donut">
+        <h3>Glazed Donut</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹100</button>
+      </div>
+      <div class="product" data-name="Chocolate Donut" data-price="3.00">
+        <img src="Donut-2.jpg" alt="Chocolate Donut">
+        <h3>Chocolate Donut</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹100</button>
+      </div>
+      <div class="product" data-name="Spicy Donut" data-price="3.00">
+        <img src="Donut-3.jpg" alt="Spicy Donut">
+        <h3>Spicy Donut</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹100</button>
+      </div>
+      <div class="product" data-name="StrawBerry Donut" data-price="3.00">
+        <img src="Donut-4.jpg" alt="StrawBerry Donut">
+        <h3>StrawBerry Donut</h3>
+        <button class="add-to-cart-btn">Add to Cart - ₹100</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cartCount = document.querySelector('.cart-items-count');
+    let itemCount = 0;
+
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        itemCount++;
+        cartCount.textContent = Items: ₹{itemCount};
+      });
+    });
+  </script>
+   <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+    </div>
+    <div class="cart-summary">
+      <p>Subtotal: <span id="subtotal">₹0.00</span></p>
+      <p>Tax (6%): <span id="tax">₹0.00</span></p>
+      <p><strong>Total: <span id="total">₹0.00</span></strong></p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+    <div class="payment-options">
+      <h3>Payment Options</h3>
+      <img src="https://via.placeholder.com/50?text=Visa" alt="Visa">
+      <img src="https://via.placeholder.com/50?text=MasterCard" alt="MasterCard">
+      <img src="https://via.placeholder.com/50?text=PayPal" alt="PayPal">
+    </div>
+  </div>
+</body>
+</html>
